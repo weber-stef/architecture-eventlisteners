@@ -7023,7 +7023,15 @@ a.text-dark:hover, a.text-dark:focus {
 .note {
   margin: 8px;
   padding: 8px;
-  background-color: #ffe96f; }
+  background-color: #fff;
+  cursor: crosshair;
+  border: 1px solid black;
+  border-radius: 3px; }
+
+.btn {
+  background-color: transparent;
+  color: #000;
+  border: 1px solid black; }
 
 
 /*# sourceMappingURL=styles.css.map*/

@@ -4,7 +4,9 @@
 
 import MyNiceEvents from "./Events"
 
-import { renderNotes } from "./helper"
+import {
+  renderNotes
+} from "./helper"
 
 export default class Storage extends MyNiceEvents {
   constructor(localStorageKey) {
@@ -18,7 +20,20 @@ export default class Storage extends MyNiceEvents {
     this.emit("updated", this.data)
     this.save()
   }
+  removeDataSet(dataParameter) {
 
+    // remove from this.data
+    this.data = this.data.filter((dummyName, index) => {
+      return index != dataParameter;
+    })
+    // console.log(`${index}`);
+    // console.log(this.data);
+    console.log(`remove it ${dataParameter}`);
+
+    // update the ui
+    this.emit("updated", this.data)
+    this.save()
+  }
   save() {
     // have access to current data
     const data = this.data
@@ -49,5 +64,9 @@ noteStorage.on("addItem", note => {
 noteStorage.on("updated", notes => {
   renderNotes(notes)
 })
+noteStorage.on("removeItem",
+  note => {
+    noteStorage.removeDataSet(note)
+  });
 
-noteStorage.initFinished()
+noteStorage.initFinished();
