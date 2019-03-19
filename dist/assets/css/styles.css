@@ -7020,8 +7020,21 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+body,
+html {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url(/assets/img/philipp-balunovic-438208-unsplash.jpg); }
+
+.container {
+  width: 100%;
+  background-color: #333;
+  margin: 0px !important;
+  max-width: 100%; }
+
 .note {
-  margin: 8px;
   padding: 8px;
   background-color: #fff;
   cursor: crosshair;
@@ -7032,6 +7045,11 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: transparent;
   color: #000;
   border: 1px solid black; }
+
+#notes {
+  background-color: #ccc;
+  margin: 0;
+  padding: 0; }
 
 
 /*# sourceMappingURL=styles.css.map*/
