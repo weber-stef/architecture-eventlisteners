@@ -291,12 +291,17 @@ var domElements = {
   noteDiv: null
 };
 var titleOfPage = "QWEDF - Your friendly next door supermarket ";
-var defaultEntry = "Need to go shopping? Any QWEDF left?";
+var defaultEntry = "Need to go shopping? Write down, what you need, so you don't forget, Silly";
 document.querySelector("label").textContent = titleOfPage;
 document.querySelector("#add-note").placeholder = defaultEntry;
 var renderNotes = function renderNotes(notes) {
   domElements.noteContainer.innerHTML = notes.map(function (note, index) {
-    return "\n        <div class=\"note col-lg-4\" id=\"".concat(index, "\" title=\"Click here to delete entry\">\n          ").concat(note, "\n        </div>\n      ");
+    var turnAround = Math.floor(10 * Math.random() - 5) + "deg"; // let topicPicPath = $(".reminderPicture").style.background - image = `url("https://source.unsplash.com/random?beer")`
+    // console.log(topicPicPath);
+    // console.log($(".reminderPicture img").src);
+
+    console.log(turnAround);
+    return "\n        <div class=\"note col-lg-4\" id=\"".concat(index, "\" title=\"Click here to delete entry\" style=\"transform:rotate(").concat(turnAround, ")\">\n          ").concat(note, "\n        </div>\n      ");
   }).join(""); // Only if I have the  notes I can  target them
 
   domElements.noteDiv = document.querySelectorAll(".note");

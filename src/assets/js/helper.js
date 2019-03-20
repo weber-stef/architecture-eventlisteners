@@ -13,14 +13,20 @@ export const domElements = {
   noteDiv: null
 }
 const titleOfPage = "QWEDF - Your friendly next door supermarket ";
-const defaultEntry = "Need to go shopping? Any QWEDF left?";
+const defaultEntry = "Need to go shopping? Write down, what you need, so you don't forget, Silly";
 document.querySelector("label").textContent = titleOfPage;
 document.querySelector("#add-note").placeholder = defaultEntry;
+
 export const renderNotes = notes => {
   domElements.noteContainer.innerHTML = notes
     .map((note, index) => {
+      let turnAround = Math.floor(10 * Math.random() - 5) + "deg";
+      // let topicPicPath = $(".reminderPicture").style.background - image = `url("https://source.unsplash.com/random?beer")`
+      // console.log(topicPicPath);
+      // console.log($(".reminderPicture img").src);
+      console.log(turnAround);
       return `
-        <div class="note col-lg-4" id="${index}" title="Click here to delete entry">
+        <div class="note col-lg-4" id="${index}" title="Click here to delete entry" style="transform:rotate(${turnAround})">
           ${note}
         </div>
       `

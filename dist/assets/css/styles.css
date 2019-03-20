@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Lobster|Dancing+Script|Shadows+Into+Light);
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -7028,19 +7028,26 @@ html {
   margin: 0;
   padding: 0;
   background-image: url(../img/philipp-balunovic-438208-unsplash.jpg);
-  background-size: cover;
-  background-size: contain; }
+  background-size: 50% auto;
+  background-repeat: repeat;
+  background-color: #ccc; }
 
 .container {
+  position: absolute;
   width: 100%;
   margin: 0px !important;
   max-width: 100%; }
 
 .note {
+  margin: 3px;
   padding: 8px;
   background-color: #fff;
   border: 1px solid black;
-  border-radius: 3px; }
+  border-radius: 3px;
+  font-family: 'Shadows Into Light', cursive;
+  /* transform: rotate(-5deg);*/
+  -webkit-box-shadow: 12px 15px 15px 0px #0e0802;
+  box-shadow: 12px 15px 15px 0px #130b03; }
 
 .btn {
   background-color: transparent;
@@ -7048,17 +7055,33 @@ html {
   border: 1px solid black; }
 
 #notes {
-  background-color: #ccc;
   margin: 0;
   padding: 0; }
 
 label {
+  text-align: center;
+  position: relative;
   font-family: 'Lobster', cursive;
   font-size: 1.5em;
   color: azure;
   background-color: #000;
   padding: 1em;
   width: 100%; }
+
+.form-control {
+  font-family: 'Lobster', cursive; }
+
+.reminderPicture {
+  background-image: url(../img/Prilblume4.jpg);
+  background-size: cover;
+  background-size: contain;
+  position: relative;
+  top: 5px;
+  left: 90%;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  border: 4px double black; }
 
 
 /*# sourceMappingURL=styles.css.map*/
