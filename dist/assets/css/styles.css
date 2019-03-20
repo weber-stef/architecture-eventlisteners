@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -7026,18 +7027,18 @@ html {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-image: url(/assets/img/philipp-balunovic-438208-unsplash.jpg); }
+  background-image: url(../img/philipp-balunovic-438208-unsplash.jpg);
+  background-size: cover;
+  background-size: contain; }
 
 .container {
   width: 100%;
-  background-color: #333;
   margin: 0px !important;
   max-width: 100%; }
 
 .note {
   padding: 8px;
   background-color: #fff;
-  cursor: crosshair;
   border: 1px solid black;
   border-radius: 3px; }
 
@@ -7050,6 +7051,14 @@ html {
   background-color: #ccc;
   margin: 0;
   padding: 0; }
+
+label {
+  font-family: 'Lobster', cursive;
+  font-size: 1.5em;
+  color: azure;
+  background-color: #000;
+  padding: 1em;
+  width: 100%; }
 
 
 /*# sourceMappingURL=styles.css.map*/

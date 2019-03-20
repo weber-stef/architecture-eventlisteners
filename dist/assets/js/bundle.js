@@ -290,9 +290,13 @@ var domElements = {
   // noteDiv: $(".note")
   noteDiv: null
 };
+var titleOfPage = "QWEDF - Your friendly next door supermarket ";
+var defaultEntry = "Need to go shopping? Any QWEDF left?";
+document.querySelector("label").textContent = titleOfPage;
+document.querySelector("#add-note").placeholder = defaultEntry;
 var renderNotes = function renderNotes(notes) {
   domElements.noteContainer.innerHTML = notes.map(function (note, index) {
-    return "\n        <div class=\"note col-lg-4\" id=\"".concat(index, "\">\n          ").concat(note, "\n        </div>\n      ");
+    return "\n        <div class=\"note col-lg-4\" id=\"".concat(index, "\" title=\"Click here to delete entry\">\n          ").concat(note, "\n        </div>\n      ");
   }).join(""); // Only if I have the  notes I can  target them
 
   domElements.noteDiv = document.querySelectorAll(".note");
